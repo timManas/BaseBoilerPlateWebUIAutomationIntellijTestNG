@@ -1,0 +1,24 @@
+Notes
+1. Getting "WARNING: No features found at classpath:/org/XZC/runners" was caused DUE to using this import:
+import io.cucumber.junit.CucumberOptions;   // DO NOT USE THIS ...SERIOUSLY
+
+2. Make sure all your cucumber related functionalities are "io.cucumber.testng.*"
+- If it is JUnit, it will not know what to use
+
+3. If you encounter this error:
+Internal error (java.lang.reflect.InaccessibleObjectException): Unable to make protected void java.util.ResourceBundle.setParent(java.util.ResourceBundle) accessible: module java.base does not "opens java.util" to unnamed module @13acb0d1
+java.lang.reflect.InaccessibleObjectException: Unable to make protected void java.util.ResourceBundle.setParent(java.util.ResourceBundle) accessible: module java.base does not "opens java.util" to unnamed module @13acb0d1
+- Rerun the test again quickly
+
+How to Run
+1. Run  "Reload ALl Maven Projects" on Maven Tab
+2. Run "Generate sources and Update all sources for Projects" on Maven Tab
+3. Run "Download sources and/or confiuration" on Maven Tab
+4. Run Maven Clean
+5. Run Maven Install
+6. Run Maven Compile
+7. Right click on testng.xml
+8. Run testng.xml
+
+Sample Repo:
+https://github.com/patebija/sample-cucumber-testng
